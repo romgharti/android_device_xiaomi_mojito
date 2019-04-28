@@ -7,5 +7,8 @@
 BOARD_VENDOR := xiaomi
 DEVICE_PATH := device/xiaomi/mojito
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
 # Inherit from proprietary files
 include vendor/xiaomi/mojito/BoardConfigVendor.mk
