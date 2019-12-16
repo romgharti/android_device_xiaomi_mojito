@@ -8,7 +8,7 @@
 $(call inherit-product, vendor/xiaomi/mojito/mojito-vendor.mk)
 
 # Include GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
