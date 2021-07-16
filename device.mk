@@ -195,6 +195,11 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
