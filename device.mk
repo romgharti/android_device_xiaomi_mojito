@@ -190,6 +190,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    qcom.fmradio
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
