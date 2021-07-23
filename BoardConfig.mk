@@ -88,6 +88,9 @@ TARGET_USES_MKE2FS := true
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-07-01
+
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
