@@ -17,6 +17,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
