@@ -121,6 +121,10 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := mojito_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mojito
 
+# Media
+TARGET_USES_ION := true
+TARGET_DISABLED_UBWC := true
+
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := mojito,sunny
 
