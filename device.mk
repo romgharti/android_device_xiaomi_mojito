@@ -195,6 +195,13 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
+# RIL
+PRODUCT_PACKAGES += \
+    libjson \
+    libril \
+    librilutils \
+    librmnetctl
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
