@@ -68,5 +68,9 @@ TARGET_USES_MKE2FS := true
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Sepolicy
+TARGET_SEPOLICY_DIR := msmsteppe
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Inherit from proprietary files
 include vendor/xiaomi/mojito/BoardConfigVendor.mk
