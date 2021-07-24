@@ -358,6 +358,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/xiaomi
 
 # Telephony
 PRODUCT_PACKAGES += \
