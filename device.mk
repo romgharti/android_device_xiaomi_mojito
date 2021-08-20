@@ -208,17 +208,7 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
-# GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti
-
-PRODUCT_PACKAGES += \
-    libbatching \
-    libgeofencing \
-    libgnss
-
-# GPS Configs
+# GPS Permissions
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/gps/confs/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
