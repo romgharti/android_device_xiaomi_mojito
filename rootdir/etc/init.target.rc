@@ -71,6 +71,12 @@ on late-fs
     exec_start wait_for_keymaster
     mount_all --late /vendor/etc/fstab.qcom
 
+service mi_thermald /system/vendor/bin/mi_thermald
+    class core
+    user root
+    group system
+    seclabel u:r:mi_thermald:s0
+
 on post-fs-data
     mkdir /data/vendor/nnhal 0700 system system
     mkdir /data/vendor/thermal 0771 root system
@@ -79,6 +85,7 @@ on post-fs-data
 on boot
     start rmt_storage
     start rfs_access
+    start mi_thermald
 
     # Elliptic
     chmod 0666 /dev/elliptic0
