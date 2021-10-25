@@ -236,6 +236,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.mojito
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
