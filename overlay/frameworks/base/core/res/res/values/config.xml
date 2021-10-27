@@ -657,6 +657,9 @@
     <!-- Whether device has fingerprint on power button -->
     <bool name="config_powerButtonFingerprint">true</bool>
 
+    <!-- Indicates whether device has a power button fingerprint sensor. -->
+    <bool name="config_is_powerbutton_fps" translatable="false">true</bool>
+
     <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
