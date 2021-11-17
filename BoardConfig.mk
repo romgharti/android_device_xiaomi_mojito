@@ -25,7 +25,7 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
