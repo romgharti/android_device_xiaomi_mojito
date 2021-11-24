@@ -6,5 +6,9 @@
  {
    "repository"  : "android_vendor_xiaomi_mojito",
    "target_path" : "vendor/xiaomi/mojito"
+ },
+ {
+   "repository":   "kdrag0n/proton-clang",
+   "target_path":  "prebuilts/clang/host/linux-x86/clang-proton",
  }
 ]
