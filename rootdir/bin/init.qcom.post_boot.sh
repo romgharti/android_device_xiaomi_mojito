@@ -88,16 +88,6 @@ echo 25 > /proc/sys/kernel/sched_upmigrate_boosted
 echo 85 > /proc/sys/kernel/sched_downmigrate
 echo 95 > /proc/sys/kernel/sched_upmigrate
 
-# configure governor settings for little cluster
-echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-echo 1000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-echo 1000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-
-# configure governor settings for big cluster
-echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-echo 1000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
-echo 1000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-
 # Configure default schedTune value for foreground/top-app
 echo 1 > /dev/stune/foreground/schedtune.prefer_idle
 echo 10 > /dev/stune/top-app/schedtune.boost
