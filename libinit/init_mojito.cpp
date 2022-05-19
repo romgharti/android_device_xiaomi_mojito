@@ -65,7 +65,8 @@ void vendor_load_properties()
         device = "mojito";
 
     // Override all partitions' props
-    string prop_partitions[] = { "", "bootimage.", "odm.", "product.", "system.", "system_ext.", "vendor." };
+    string prop_partitions[] = { "", "bootimage.", "odm.", "odm_dlkm.", "product.", 
+                                 "system.", "system_ext.", "vendor.", "vendor_dlkm." };
     for (const string &prop : prop_partitions) {
         property_override(string("ro.product.") + prop + string("board"), device);
         property_override(string("ro.product.") + prop + string("device"), device);
