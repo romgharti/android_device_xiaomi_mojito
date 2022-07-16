@@ -54,17 +54,16 @@ void property_override(string prop, string value)
 
 void vendor_load_properties()
 {
-    string device, model;
+    string device;
 
     string hwname = GetProperty("ro.boot.hwname", "");
 
-    if (hwname == "sunny") {
+    string model = "Redmi Note 10";
+
+    if (hwname == "sunny")
         device = "sunny";
-        model = "Redmi Note 10";
-    } else {
+    else
         device = "mojito";
-        model = "Redmi Note 10";
-    }
 
     // Override all partitions' props
     string prop_partitions[] = { "", "bootimage.", "odm.", "product.", "system.", "system_ext.", "vendor." };
