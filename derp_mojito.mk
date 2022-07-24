@@ -11,8 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mojito device
 $(call inherit-product, device/xiaomi/mojito/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Derp stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Boot Animation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -21,7 +21,14 @@ TARGET_SUPPORTS_QUICK_TAP := true
 
 TARGET_USES_AOSP_RECOVERY := true
 
-PRODUCT_NAME := lineage_mojito
+# DerpFest Flags
+DERP_BUILDTYPE := Unofficial
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_LEGACY_BOOTANIMATION := true
+TARGET_USES_BLUR := true
+WITH_GMS := true
+
+PRODUCT_NAME := derp_mojito
 PRODUCT_DEVICE := mojito
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 10
