@@ -7,6 +7,9 @@ debug.force_no_blanking=true
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
+# IncrementalFS
+ro.incremental.enable=yes
+
 # Iorapd
 ro.iorapd.enable=false
 iorapd.perfetto.enable=false
