@@ -60,12 +60,12 @@ void load_common_props() {
     property_override("bluetooth.device.default_name", "Redmi Note 10");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.model", "M2101K7AI");
 }
 
 void load_sunny() {
     property_override("ro.product.device", "sunny");
     property_override("ro.product.name", "sunny");
+    property_override("ro.product.model", "M2101K7AG");
     property_override("ro.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
     property_override("ro.vendor.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
     property_override("ro.bootimage.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
@@ -75,6 +75,7 @@ void load_sunny() {
 void load_mojito() {
     property_override("ro.product.device", "mojito");
     property_override("ro.product.name", "mojito");
+    property_override("ro.product.model", "M2101K7AI");
     property_override("ro.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
     property_override("ro.vendor.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
     property_override("ro.bootimage.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
