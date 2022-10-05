@@ -56,40 +56,32 @@ void load_dalvikvm_props() {
     }
 }
 
-void load_common_props() {
+void load_vendor_props() {
+    std::string hwname = GetProperty("ro.boot.hwname", "");
+    if (hwname.find("sunny") != std::string::npos) {
+        property_override("ro.product.device", "sunny");
+        property_override("ro.product.name", "sunny");
+        property_override("ro.product.model", "M2101K7AG");
+        property_override("ro.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+        property_override("ro.vendor.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+        property_override("ro.bootimage.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+        property_override("ro.build.description", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+    } else {
+        property_override("ro.product.device", "mojito");
+        property_override("ro.product.name", "mojito");
+        property_override("ro.product.model", "M2101K7AI");
+        property_override("ro.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+        property_override("ro.vendor.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+        property_override("ro.bootimage.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+        property_override("ro.build.description", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
+    }
+
     property_override("bluetooth.device.default_name", "Redmi Note 10");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.manufacturer", "Xiaomi");
 }
 
-void load_sunny() {
-    property_override("ro.product.device", "sunny");
-    property_override("ro.product.name", "sunny");
-    property_override("ro.product.model", "M2101K7AG");
-    property_override("ro.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-    property_override("ro.vendor.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-    property_override("ro.build.description", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-}
-
-void load_mojito() {
-    property_override("ro.product.device", "mojito");
-    property_override("ro.product.name", "mojito");
-    property_override("ro.product.model", "M2101K7AI");
-    property_override("ro.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-    property_override("ro.vendor.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-    property_override("ro.build.description", "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys");
-}
-
 void vendor_load_properties() {
-    std::string hwname = GetProperty("ro.boot.hwname", "");
-    if (hwname.find("sunny") != std::string::npos) {
-        load_sunny();
-    } else {
-        load_mojito();
-    }
-
-    load_common_props();
+    load_vendor_props();
     load_dalvikvm_props();
 }
