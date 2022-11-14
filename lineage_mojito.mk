@@ -21,9 +21,6 @@ TARGET_SUPPORTS_QUICK_TAP := true
 
 TARGET_USES_AOSP_RECOVERY := true
 
-# disable/enable blur support, default is false
-TARGET_ENABLE_BLUR := true
-
 # Spoof build description/fingerprint as pixel device
 TARGET_USE_PIXEL_FINGERPRINT := false
 
