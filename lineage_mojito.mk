@@ -21,12 +21,6 @@ TARGET_SUPPORTS_QUICK_TAP := true
 
 TARGET_USES_AOSP_RECOVERY := true
 
-# Chipset flag
-RICE_CHIPSET := "SM6150AC"
-
-# Maintainer flag
-RICE_MAINTAINER := "fiqri1910"
-
 # disable/enable blur support, default is false
 TARGET_ENABLE_BLUR := true
 
