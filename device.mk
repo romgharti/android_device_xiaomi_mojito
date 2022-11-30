@@ -364,6 +364,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     libqti-perfd-client
 
+# Platform
+TARGET_BOARD_PLATFORM := sm6150
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
